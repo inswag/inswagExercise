@@ -14,6 +14,8 @@
 		9AA469B72872796500543C5A /* NinePolygonChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA469B62872796500543C5A /* NinePolygonChartView.swift */; };
 		9AA469F5287542CE00543C5A /* BigChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA469F4287542CE00543C5A /* BigChartView.swift */; };
 		9AA469F72875830F00543C5A /* BigChartIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA469F62875830F00543C5A /* BigChartIndexView.swift */; };
+		9AE647E5287BB1B300AE162E /* DevelopmentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE647E4287BB1B300AE162E /* DevelopmentProgressView.swift */; };
+		9AE647E7287BDD6400AE162E /* GrowChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE647E6287BDD6400AE162E /* GrowChartView.swift */; };
 		E6A9EE542861ECE700A7B138 /* TodayChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A9EE532861ECE700A7B138 /* TodayChartView.swift */; };
 		E6A9EE562862022700A7B138 /* WeeklyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A9EE552862022700A7B138 /* WeeklyChartView.swift */; };
 		E6C9B53E2868B69F00E9C3EF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C9B53D2868B69F00E9C3EF /* HealthKit.framework */; };
@@ -53,6 +55,8 @@
 		9AA469B62872796500543C5A /* NinePolygonChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePolygonChartView.swift; sourceTree = "<group>"; };
 		9AA469F4287542CE00543C5A /* BigChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigChartView.swift; sourceTree = "<group>"; };
 		9AA469F62875830F00543C5A /* BigChartIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigChartIndexView.swift; sourceTree = "<group>"; };
+		9AE647E4287BB1B300AE162E /* DevelopmentProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentProgressView.swift; sourceTree = "<group>"; };
+		9AE647E6287BDD6400AE162E /* GrowChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowChartView.swift; sourceTree = "<group>"; };
 		E6A9EE532861ECE700A7B138 /* TodayChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayChartView.swift; sourceTree = "<group>"; };
 		E6A9EE552862022700A7B138 /* WeeklyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyChartView.swift; sourceTree = "<group>"; };
 		E6C9B53B2868B69F00E9C3EF /* ChartMaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChartMaker.entitlements; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				9AA469B62872796500543C5A /* NinePolygonChartView.swift */,
 				9AA469F4287542CE00543C5A /* BigChartView.swift */,
 				9AA469F62875830F00543C5A /* BigChartIndexView.swift */,
+				9AE647E4287BB1B300AE162E /* DevelopmentProgressView.swift */,
+				9AE647E6287BDD6400AE162E /* GrowChartView.swift */,
 			);
 			path = ChartMaker;
 			sourceTree = "<group>";
@@ -307,9 +313,11 @@
 				E6E552132860B4AD001D982B /* ViewController.swift in Sources */,
 				E6E5520F2860B4AD001D982B /* AppDelegate.swift in Sources */,
 				9AA469F5287542CE00543C5A /* BigChartView.swift in Sources */,
+				9AE647E7287BDD6400AE162E /* GrowChartView.swift in Sources */,
 				9AA469B72872796500543C5A /* NinePolygonChartView.swift in Sources */,
 				9AA469F72875830F00543C5A /* BigChartIndexView.swift in Sources */,
 				E6A9EE542861ECE700A7B138 /* TodayChartView.swift in Sources */,
+				9AE647E5287BB1B300AE162E /* DevelopmentProgressView.swift in Sources */,
 				E6E552112860B4AD001D982B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
