@@ -17,6 +17,10 @@
 		9AE647E5287BB1B300AE162E /* DevelopmentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE647E4287BB1B300AE162E /* DevelopmentProgressView.swift */; };
 		9AE647E7287BDD6400AE162E /* GrowChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE647E6287BDD6400AE162E /* GrowChartView.swift */; };
 		9AE647E9287BEAE600AE162E /* GrowChartIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE647E8287BEAE600AE162E /* GrowChartIndexView.swift */; };
+		E63DC3AF287D377C00190D67 /* PopUpDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63DC3AD287D377C00190D67 /* PopUpDatePickerViewController.swift */; };
+		E63DC3B0287D377C00190D67 /* PopUpDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63DC3AE287D377C00190D67 /* PopUpDatePickerViewController.xib */; };
+		E63DC3B4287D5DAC00190D67 /* GrowthDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63DC3B3287D5DAC00190D67 /* GrowthDateView.swift */; };
+		E63DC3B6287D6B7C00190D67 /* GrowthDateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63DC3B5287D6B7C00190D67 /* GrowthDateView.xib */; };
 		E6A9EE542861ECE700A7B138 /* TodayChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A9EE532861ECE700A7B138 /* TodayChartView.swift */; };
 		E6A9EE562862022700A7B138 /* WeeklyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A9EE552862022700A7B138 /* WeeklyChartView.swift */; };
 		E6C9B53E2868B69F00E9C3EF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C9B53D2868B69F00E9C3EF /* HealthKit.framework */; };
@@ -59,6 +63,10 @@
 		9AE647E4287BB1B300AE162E /* DevelopmentProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentProgressView.swift; sourceTree = "<group>"; };
 		9AE647E6287BDD6400AE162E /* GrowChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowChartView.swift; sourceTree = "<group>"; };
 		9AE647E8287BEAE600AE162E /* GrowChartIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowChartIndexView.swift; sourceTree = "<group>"; };
+		E63DC3AD287D377C00190D67 /* PopUpDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpDatePickerViewController.swift; sourceTree = "<group>"; };
+		E63DC3AE287D377C00190D67 /* PopUpDatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpDatePickerViewController.xib; sourceTree = "<group>"; };
+		E63DC3B3287D5DAC00190D67 /* GrowthDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthDateView.swift; sourceTree = "<group>"; };
+		E63DC3B5287D6B7C00190D67 /* GrowthDateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowthDateView.xib; sourceTree = "<group>"; };
 		E6A9EE532861ECE700A7B138 /* TodayChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayChartView.swift; sourceTree = "<group>"; };
 		E6A9EE552862022700A7B138 /* WeeklyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyChartView.swift; sourceTree = "<group>"; };
 		E6C9B53B2868B69F00E9C3EF /* ChartMaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChartMaker.entitlements; sourceTree = "<group>"; };
@@ -104,6 +112,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E63DC3B1287D5D6400190D67 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				E63DC3B2287D5D6F00190D67 /* Reusable */,
+				E63DC3AD287D377C00190D67 /* PopUpDatePickerViewController.swift */,
+				E63DC3AE287D377C00190D67 /* PopUpDatePickerViewController.xib */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		E63DC3B2287D5D6F00190D67 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				E63DC3B3287D5DAC00190D67 /* GrowthDateView.swift */,
+				E63DC3B5287D6B7C00190D67 /* GrowthDateView.xib */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
 		E6C9B53C2868B69F00E9C3EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +163,7 @@
 		E6E5520D2860B4AD001D982B /* ChartMaker */ = {
 			isa = PBXGroup;
 			children = (
+				E63DC3B1287D5D6400190D67 /* PopUp */,
 				E6C9B53B2868B69F00E9C3EF /* ChartMaker.entitlements */,
 				E6E5520E2860B4AD001D982B /* AppDelegate.swift */,
 				E6E552102860B4AD001D982B /* SceneDelegate.swift */,
@@ -282,9 +310,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A1CF5E42861619E00E0C0C1 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				E63DC3B0287D377C00190D67 /* PopUpDatePickerViewController.xib in Resources */,
 				E6E5521B2860B4AF001D982B /* LaunchScreen.storyboard in Resources */,
 				E6E552182860B4AF001D982B /* Assets.xcassets in Resources */,
 				E6E552162860B4AD001D982B /* Main.storyboard in Resources */,
+				E63DC3B6287D6B7C00190D67 /* GrowthDateView.xib in Resources */,
 				9A1CF5E228614C9A00E0C0C1 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,8 +341,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6A9EE562862022700A7B138 /* WeeklyChartView.swift in Sources */,
+				E63DC3AF287D377C00190D67 /* PopUpDatePickerViewController.swift in Sources */,
 				9A1CF5E028614BD600E0C0C1 /* Font.swift in Sources */,
 				9A2D9A87286E856000E88711 /* Date.swift in Sources */,
+				E63DC3B4287D5DAC00190D67 /* GrowthDateView.swift in Sources */,
 				E6E552132860B4AD001D982B /* ViewController.swift in Sources */,
 				E6E5520F2860B4AD001D982B /* AppDelegate.swift in Sources */,
 				9AA469F5287542CE00543C5A /* BigChartView.swift in Sources */,
