@@ -261,9 +261,18 @@ class BigChartView: UIView {
             let graphY = graph.position.y - 9
             let circlePosition = CGPoint.init(x: graphX, y: graphY)
             
-            let circlePath = UIBezierPath.init(ovalIn: CGRect.init(origin: circlePosition, size: CGSize.init(width: 18, height: 18)))
-            UIColor.rgb(r: 205, g: 0, b: 255).setFill()
-            circlePath.fill()
+            let glayer = CAGradientLayer()
+            glayer.frame = CGRect.init(origin: circlePosition,
+                                       size: CGSize.init(width: 18, height: 18))
+            glayer.cornerRadius = 9
+            glayer.type = .radial
+            glayer.locations = [0, 0.5, 1]
+            glayer.colors = [UIColor.rgb(r: 205, g: 0, b: 255).cgColor,
+                             UIColor.rgb(r: 205, g: 0, b: 255, a: 0.8).cgColor,
+                             UIColor.rgb(r: 205, g: 0, b: 255, a: 0.0).cgColor]
+            glayer.startPoint = CGPoint.init(x: 0.5, y: 0.5)
+            glayer.endPoint = CGPoint.init(x: 1, y: 1)
+            layer.addSublayer(glayer)
         }
     }
     
