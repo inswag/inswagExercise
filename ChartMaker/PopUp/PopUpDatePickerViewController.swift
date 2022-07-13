@@ -17,6 +17,17 @@ class PopUpDatePickerViewController: UIViewController {
     
     //
     
+    var selectedDate: Date?
+    
+    //
+    
+    convenience init(selectedDate: Date) {
+        self.init()
+        self.selectedDate = selectedDate
+    }
+    
+    //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,6 +40,33 @@ class PopUpDatePickerViewController: UIViewController {
         }
     }
 
+    //
+    
+    private func fillUI() {
+        if let selectedDate = selectedDate {
+            // 기 선택한 날짜가 있을 때
+            
+            
+            
+            
+        } else {
+            // 기 선택한 날짜가 없을 때
+            let selectedDate = Date()
+            selectedDate.year()
+            selectedDate.month()
+            
+            
+            let days = selectedDate.numberOfDaysInMonth()
+            
+        }
+    }
+    
+    private func fillWithSelectedDate() {
+        
+    }
+    
+    //
+    
     //
     
     private func reloadDate() {
@@ -84,5 +122,31 @@ extension PopUpDatePickerViewController: UIPickerViewDataSource, UIPickerViewDel
         
     }
     
+    
+}
+
+// MARK: Do NOT COPY
+
+extension Date {
+    
+    func numberOfDaysInMonth() -> Int {
+        let calendar = Calendar.current
+        let days = (calendar as NSCalendar).range(of: NSCalendar.Unit.day,
+                                                  in: NSCalendar.Unit.month,
+                                                  for: self)
+        return days.length
+    }
+    
+    func month() -> Int {
+        let calendar = Calendar.current
+        let dateComponent = (calendar as NSCalendar).components(.month, from: self)
+        return dateComponent.month!
+    }
+    
+    func year() -> Int {
+        let calendar = Calendar.current
+        let dateComponent = (calendar as NSCalendar).components(.year, from: self)
+        return dateComponent.year!
+    }
     
 }
