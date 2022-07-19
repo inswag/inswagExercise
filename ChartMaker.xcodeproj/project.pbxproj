@@ -11,6 +11,8 @@
 		9A1CF5E228614C9A00E0C0C1 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A1CF5E128614C9A00E0C0C1 /* Poppins-Regular.ttf */; };
 		9A1CF5E42861619E00E0C0C1 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A1CF5E32861619E00E0C0C1 /* Poppins-SemiBoldItalic.ttf */; };
 		9A2D9A87286E856000E88711 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D9A86286E855F00E88711 /* Date.swift */; };
+		9A7187A328866B19001FDA92 /* GrowthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7187A128866B19001FDA92 /* GrowthViewController.swift */; };
+		9A7187A428866B19001FDA92 /* GrowthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A7187A228866B19001FDA92 /* GrowthViewController.xib */; };
 		9AA469B72872796500543C5A /* NinePolygonChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA469B62872796500543C5A /* NinePolygonChartView.swift */; };
 		9AA469F5287542CE00543C5A /* BigChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA469F4287542CE00543C5A /* BigChartView.swift */; };
 		9AA469F72875830F00543C5A /* BigChartIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA469F62875830F00543C5A /* BigChartIndexView.swift */; };
@@ -57,6 +59,8 @@
 		9A1CF5E128614C9A00E0C0C1 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		9A1CF5E32861619E00E0C0C1 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		9A2D9A86286E855F00E88711 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		9A7187A128866B19001FDA92 /* GrowthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthViewController.swift; sourceTree = "<group>"; };
+		9A7187A228866B19001FDA92 /* GrowthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowthViewController.xib; sourceTree = "<group>"; };
 		9AA469B62872796500543C5A /* NinePolygonChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePolygonChartView.swift; sourceTree = "<group>"; };
 		9AA469F4287542CE00543C5A /* BigChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigChartView.swift; sourceTree = "<group>"; };
 		9AA469F62875830F00543C5A /* BigChartIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigChartIndexView.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				9AE647E4287BB1B300AE162E /* DevelopmentProgressView.swift */,
 				9AE647E6287BDD6400AE162E /* GrowChartView.swift */,
 				9AE647E8287BEAE600AE162E /* GrowChartIndexView.swift */,
+				9A7187A128866B19001FDA92 /* GrowthViewController.swift */,
+				9A7187A228866B19001FDA92 /* GrowthViewController.xib */,
 			);
 			path = ChartMaker;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 				9A1CF5E42861619E00E0C0C1 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				E63DC3B0287D377C00190D67 /* PopUpDatePickerViewController.xib in Resources */,
 				E6E5521B2860B4AF001D982B /* LaunchScreen.storyboard in Resources */,
+				9A7187A428866B19001FDA92 /* GrowthViewController.xib in Resources */,
 				E6E552182860B4AF001D982B /* Assets.xcassets in Resources */,
 				E6E552162860B4AD001D982B /* Main.storyboard in Resources */,
 				E63DC3B6287D6B7C00190D67 /* GrowthDateView.xib in Resources */,
@@ -355,6 +362,7 @@
 				E6A9EE542861ECE700A7B138 /* TodayChartView.swift in Sources */,
 				9AE647E5287BB1B300AE162E /* DevelopmentProgressView.swift in Sources */,
 				E6E552112860B4AD001D982B /* SceneDelegate.swift in Sources */,
+				9A7187A328866B19001FDA92 /* GrowthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

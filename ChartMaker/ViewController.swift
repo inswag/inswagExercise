@@ -62,6 +62,13 @@ class ViewController: UIViewController {
 //        self.prepareTimeData(insertTime: "2022-06-28 10:34:24") {
 //
 //        }
+        
+        let view = GrowthViewController.init()
+        view.modalPresentationStyle = .fullScreen
+        self.present(view,
+                     animated: true,
+                     completion: nil)
+        
     }
     
     func prepareTimeData(insertTime: String,
