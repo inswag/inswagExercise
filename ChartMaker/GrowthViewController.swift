@@ -10,10 +10,17 @@ import UIKit
 class GrowthViewController: UIViewController {
 
     //
+    @IBOutlet weak var growChart: GrowChartView!
+    @IBOutlet weak var growChartWidth: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        UIView.animate(withDuration: 0.2) {
+            self.growChartWidth.constant = self.growChart.getFullWidth()
+            self.growChart.setNeedsDisplay()
+        }
     }
 
     //

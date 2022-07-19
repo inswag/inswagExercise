@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GrowthViewController" customModule="ChartMaker" customModuleProvider="target">
             <connections>
+                <outlet property="growChart" destination="ygw-Wg-roN" id="Jg6-tJ-0hR"/>
+                <outlet property="growChartWidth" destination="YZI-nC-9zw" id="CKz-mX-B8B"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,11 +34,15 @@
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qn-dQ-JRX">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                             <subviews>
-                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="500" translatesAutoresizingMaskIntoConstraints="NO" id="ygw-Wg-roN">
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="500" translatesAutoresizingMaskIntoConstraints="NO" id="ygw-Wg-roN" customClass="GrowChartView" customModule="ChartMaker" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="500"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="240" id="YZI-nC-9zw"/>
+                                    </constraints>
                                 </view>
                             </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="ygw-Wg-roN" firstAttribute="top" secondItem="9Qn-dQ-JRX" secondAttribute="top" id="6nm-dn-l3R"/>
                                 <constraint firstAttribute="trailing" secondItem="ygw-Wg-roN" secondAttribute="trailing" id="7YV-WJ-Dbw"/>
@@ -46,7 +52,7 @@
                             </constraints>
                         </scrollView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="9Qn-dQ-JRX" firstAttribute="leading" secondItem="Wob-HI-g3t" secondAttribute="leading" id="0gS-9H-hrw"/>
                         <constraint firstAttribute="height" constant="500" id="KSO-T3-Hqi"/>
@@ -57,7 +63,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mO-1J-moF">
                     <rect key="frame" x="0.0" y="198" width="47" height="500"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="47" id="j5w-Jw-TWQ"/>
                     </constraints>
@@ -303,7 +309,7 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wDn-ei-S8M" secondAttribute="trailing" id="5HN-T2-2xz"/>
                 <constraint firstAttribute="leading" secondItem="7Wc-p0-fTZ" secondAttribute="trailing" constant="-79" id="7dV-YI-nNy"/>
@@ -322,7 +328,7 @@
                 <constraint firstItem="9mO-1J-moF" firstAttribute="top" secondItem="Wob-HI-g3t" secondAttribute="top" id="ydS-dN-PXr"/>
                 <constraint firstItem="7Wc-p0-fTZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="zqg-yS-mMb"/>
             </constraints>
-            <point key="canvasLocation" x="803" y="9"/>
+            <point key="canvasLocation" x="293" y="153"/>
         </view>
     </objects>
     <resources>
