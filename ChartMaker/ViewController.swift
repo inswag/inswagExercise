@@ -30,6 +30,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var chartView: TodayChartView!
     @IBOutlet weak var dateLabel: UILabel!
     
+    
+    @IBOutlet weak var devProgressView: DevelopmentProgressView!
+    
     //
     
     let pedometer = CMPedometer()
@@ -49,7 +52,7 @@ class ViewController: UIViewController {
         
 //        print("Auth : ", healthStore.authorizationStatus(for: typeToRead!).rawValue)
         
-        
+        devProgressView.category = .head
     }
 
     var count: Int = 0

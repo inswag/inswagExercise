@@ -101,10 +101,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xq1-aJ-G8t" customClass="DevelopmentProgressView" customModule="ChartMaker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="92" width="374" height="16"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="38"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="V0P-oH-4G5"/>
+                                    <constraint firstAttribute="height" constant="38" id="V0P-oH-4G5"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -116,23 +116,27 @@
                             <constraint firstItem="OLl-AO-qVH" firstAttribute="top" secondItem="zZp-jm-nLe" secondAttribute="bottom" constant="90.5" id="ET4-CP-BFb"/>
                             <constraint firstItem="PXr-lt-d0L" firstAttribute="centerY" secondItem="zZp-jm-nLe" secondAttribute="centerY" id="OU7-gM-3Va"/>
                             <constraint firstItem="zZp-jm-nLe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OwT-i3-bl4"/>
+                            <constraint firstItem="OLl-AO-qVH" firstAttribute="top" secondItem="xq1-aJ-G8t" secondAttribute="bottom" constant="42.5" id="QpG-q1-6ma"/>
                             <constraint firstItem="xq1-aJ-G8t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rye-gd-Q2a"/>
                             <constraint firstItem="OLl-AO-qVH" firstAttribute="bottom" secondItem="L4Y-9y-k2h" secondAttribute="bottom" id="Z0Q-Z3-NQf"/>
                             <constraint firstItem="hDe-Ne-6bS" firstAttribute="leading" secondItem="zZp-jm-nLe" secondAttribute="trailing" constant="13.5" id="e6z-e2-feQ"/>
-                            <constraint firstItem="xq1-aJ-G8t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iSy-lg-lA6"/>
+                            <constraint firstItem="xq1-aJ-G8t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iSy-lg-lA6"/>
                             <constraint firstItem="xq1-aJ-G8t" firstAttribute="top" secondItem="zZp-jm-nLe" secondAttribute="bottom" constant="10" id="jBv-th-f0B"/>
                             <constraint firstItem="hDe-Ne-6bS" firstAttribute="centerY" secondItem="zZp-jm-nLe" secondAttribute="centerY" id="lTR-l5-fHT"/>
                             <constraint firstItem="zZp-jm-nLe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="mgU-33-gGZ"/>
                             <constraint firstItem="zZp-jm-nLe" firstAttribute="leading" secondItem="PXr-lt-d0L" secondAttribute="trailing" constant="15" id="r91-8G-tdD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xq1-aJ-G8t" secondAttribute="trailing" constant="20" id="tIg-zY-xtx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xq1-aJ-G8t" secondAttribute="trailing" id="tIg-zY-xtx"/>
                             <constraint firstItem="L4Y-9y-k2h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vBn-HD-src"/>
                             <constraint firstItem="OLl-AO-qVH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xbN-he-j7G"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="devProgressView" destination="xq1-aJ-G8t" id="jPC-MA-tFC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-408.69565217391306" y="137.27678571428569"/>
+            <point key="canvasLocation" x="145" y="68"/>
         </scene>
     </scenes>
     <resources>

@@ -446,7 +446,7 @@ class BigChartView: UIView {
         }
     }
     
-    private func drawXAxisLine() {
+    private func  drawXAxisLine() {
         for xAxisLine in xAxisLines {
             
             let path = UIBezierPath()
