@@ -13,6 +13,8 @@
 		9A2D9A87286E856000E88711 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D9A86286E855F00E88711 /* Date.swift */; };
 		9A7187A328866B19001FDA92 /* GrowthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7187A128866B19001FDA92 /* GrowthViewController.swift */; };
 		9A7187A428866B19001FDA92 /* GrowthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A7187A228866B19001FDA92 /* GrowthViewController.xib */; };
+		9A7187A62887CC24001FDA92 /* ObesityChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7187A52887CC24001FDA92 /* ObesityChartView.swift */; };
+		9A7187A82887CC35001FDA92 /* ObesityChartIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7187A72887CC35001FDA92 /* ObesityChartIndexView.swift */; };
 		9AA469B72872796500543C5A /* NinePolygonChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA469B62872796500543C5A /* NinePolygonChartView.swift */; };
 		9AA469F5287542CE00543C5A /* BigChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA469F4287542CE00543C5A /* BigChartView.swift */; };
 		9AA469F72875830F00543C5A /* BigChartIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA469F62875830F00543C5A /* BigChartIndexView.swift */; };
@@ -61,6 +63,8 @@
 		9A2D9A86286E855F00E88711 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9A7187A128866B19001FDA92 /* GrowthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthViewController.swift; sourceTree = "<group>"; };
 		9A7187A228866B19001FDA92 /* GrowthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowthViewController.xib; sourceTree = "<group>"; };
+		9A7187A52887CC24001FDA92 /* ObesityChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObesityChartView.swift; sourceTree = "<group>"; };
+		9A7187A72887CC35001FDA92 /* ObesityChartIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObesityChartIndexView.swift; sourceTree = "<group>"; };
 		9AA469B62872796500543C5A /* NinePolygonChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePolygonChartView.swift; sourceTree = "<group>"; };
 		9AA469F4287542CE00543C5A /* BigChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigChartView.swift; sourceTree = "<group>"; };
 		9AA469F62875830F00543C5A /* BigChartIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigChartIndexView.swift; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				9AE647E8287BEAE600AE162E /* GrowChartIndexView.swift */,
 				9A7187A128866B19001FDA92 /* GrowthViewController.swift */,
 				9A7187A228866B19001FDA92 /* GrowthViewController.xib */,
+				9A7187A52887CC24001FDA92 /* ObesityChartView.swift */,
+				9A7187A72887CC35001FDA92 /* ObesityChartIndexView.swift */,
 			);
 			path = ChartMaker;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 			files = (
 				E6A9EE562862022700A7B138 /* WeeklyChartView.swift in Sources */,
 				E63DC3AF287D377C00190D67 /* PopUpDatePickerViewController.swift in Sources */,
+				9A7187A82887CC35001FDA92 /* ObesityChartIndexView.swift in Sources */,
 				9A1CF5E028614BD600E0C0C1 /* Font.swift in Sources */,
 				9A2D9A87286E856000E88711 /* Date.swift in Sources */,
 				E63DC3B4287D5DAC00190D67 /* GrowthDateView.swift in Sources */,
@@ -363,6 +370,7 @@
 				9AE647E5287BB1B300AE162E /* DevelopmentProgressView.swift in Sources */,
 				E6E552112860B4AD001D982B /* SceneDelegate.swift in Sources */,
 				9A7187A328866B19001FDA92 /* GrowthViewController.swift in Sources */,
+				9A7187A62887CC24001FDA92 /* ObesityChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

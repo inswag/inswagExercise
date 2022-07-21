@@ -252,9 +252,13 @@ class ViewController: UIViewController {
     var models: [PedometerAddingTimeModel] = []
     
     @IBAction func getMonthlyData(_ sender: UIButton) {
-        self.prepareTimeDatas(insertTime: "2022-06-28 10:34:24") {
-            
-        }
+        let view = PopUpDatePickerViewController.init()
+        view.modalPresentationStyle = .overCurrentContext
+        self.present(view, animated: true)
+        
+//        self.prepareTimeDatas(insertTime: "2022-06-28 10:34:24") {
+//
+//        }
     }
     
     func prepareTimeDatas(insertTime: String,

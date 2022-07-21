@@ -16,8 +16,8 @@ class GrowthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         UIView.animate(withDuration: 0.2) {
+            self.growChart.datas.first!.isSelected = true
             self.growChartWidth.constant = self.growChart.getFullWidth()
             self.growChart.setNeedsDisplay()
         }

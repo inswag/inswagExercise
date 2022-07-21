@@ -31,4 +31,10 @@ class GrowthDateView: UIView {
         self.addSubview(view)
     }
     
+    //
+    
+    func fillUI(value: Int) {
+        self.dateLabel.text = "\(value)"
+    }
+    
 }
