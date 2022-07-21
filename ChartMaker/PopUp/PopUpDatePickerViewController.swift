@@ -19,6 +19,24 @@ class PopUpDatePickerViewController: UIViewController {
     
     var selectedDate: Date?
     
+    var currentYear: Int = 2010
+    var currentMonth: Int = 1
+    var currentDay: Int = 1
+    
+    var numberOfDayInMonth: Int = 0
+    
+    let yearArr: [Int] = [
+        2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022
+    ]
+    
+    let monthArr: [Int] = [
+        1,2,3,4,5,6,7,8,9,10,11,12
+    ]
+    
+    var dayArr: [Int] = [
+    
+    ]
+    
     //
     
     convenience init(selectedDate: Date) {
@@ -33,13 +51,24 @@ class PopUpDatePickerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-//        [yearPickerView,
-//         monthPickerView,
-//         dayPickerView].forEach {
-////            $0?.delegate = self
-//        }
+        [yearPickerView,
+         monthPickerView,
+         dayPickerView].forEach {
+            $0?.dataSource = self
+            $0?.delegate = self
+        }
+        
+        fillUI()
     }
 
+    override func viewDidLayoutSubviews() {
+        [yearPickerView,
+         monthPickerView,
+         dayPickerView].forEach {
+            $0?.subviews[1].backgroundColor = .clear
+        }
+    }
+    
     //
     
     private func fillUI() {
@@ -52,12 +81,43 @@ class PopUpDatePickerViewController: UIViewController {
         } else {
             // 기 선택한 날짜가 없을 때
             let selectedDate = Date()
-            selectedDate.year()
-            selectedDate.month()
+            self.currentYear = selectedDate.year()
+            self.currentMonth = selectedDate.month()
+            self.currentDay = selectedDate.day()
             
-            
-            let days = selectedDate.numberOfDaysInMonth()
-            
+            self.numberOfDayInMonth = selectedDate.numberOfDaysInMonth()
+        }
+        
+        self.insertDayArr(length: self.numberOfDayInMonth)
+        self.reloadDay()
+        
+        // 날짜 세팅 후 맞춤 처리
+        
+        for (idx, item) in yearArr.enumerated() {
+            if currentYear == item {
+                self.yearPickerView.selectRow(idx,
+                                              inComponent: 0,
+                                              animated: true)
+                break
+            }
+        }
+        
+        for (idx, item) in monthArr.enumerated() {
+            if currentMonth == item {
+                self.monthPickerView.selectRow(idx,
+                                              inComponent: 0,
+                                              animated: true)
+                break
+            }
+        }
+        
+        for (idx, item) in dayArr.enumerated() {
+            if currentDay == item {
+                self.dayPickerView.selectRow(idx,
+                                             inComponent: 0,
+                                             animated: true)
+                break
+            }
         }
     }
     
@@ -69,61 +129,141 @@ class PopUpDatePickerViewController: UIViewController {
     
     //
     
-    private func reloadDate() {
+    private func reloadDay() {
         dayPickerView.reloadAllComponents()
+        
     }
     
 
+    private func insertDayArr(length: Int) {
+        self.dayArr.removeAll()
+        
+        for i in 0..<length {
+            self.dayArr.append(i+1)
+        }
+        
+        print("Day count : ", self.dayArr.count)
+    }
 
+    @IBAction func finishSelectAction(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
 }
 
-//extension PopUpDatePickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
-//
-//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-//        switch pickerView {
-//        case yearPickerView:
-//
-//        case monthPickerView:
-//
-//        case dayPickerView:
-//
-//        }
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        switch pickerView {
-//        case yearPickerView:
-//
-//        case monthPickerView:
-//
-//        case dayPickerView:
-//
-//        }
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-//
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-//
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView,
-//                    viewForRow row: Int,
-//                    forComponent component: Int,
-//                    reusing view: UIView?) -> UIView {
-//
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView,
-//                    didSelectRow row: Int,
-//                    inComponent component: Int) {
-//
-//    }
-//
-//
-//}
+extension PopUpDatePickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView,
+                    numberOfRowsInComponent component: Int) -> Int {
+        switch pickerView {
+        case yearPickerView:
+            return yearArr.count
+        case monthPickerView:
+            return monthArr.count
+        case dayPickerView:
+            return dayArr.count
+        default:
+            return 0
+        }
+    }
+
+    func pickerView(_ pickerView: UIPickerView,
+                    widthForComponent component: Int) -> CGFloat {
+        return 60
+    }
+
+    func pickerView(_ pickerView: UIPickerView,
+                    rowHeightForComponent component: Int) -> CGFloat {
+        return 59
+    }
+
+    func pickerView(_ pickerView: UIPickerView,
+                    viewForRow row: Int,
+                    forComponent component: Int,
+                    reusing view: UIView?) -> UIView {
+        
+        let view = GrowthDateView.init()
+        
+        switch pickerView {
+        case yearPickerView:
+            view.fillUI(value: self.yearArr[row])
+            return view
+        case monthPickerView:
+            view.fillUI(value: self.monthArr[row])
+            return view
+        case dayPickerView:
+            view.fillUI(value: self.dayArr[row])
+            return view
+        default:
+            let view = UIView.init()
+            return view
+        }
+    }
+
+    func pickerView(_ pickerView: UIPickerView,
+                    didSelectRow row: Int,
+                    inComponent component: Int) {
+        switch pickerView {
+        case yearPickerView:
+            self.currentYear = self.yearArr[row]
+            
+            var day = ""
+            
+            if currentMonth < 10 {
+                if currentDay < 10 {
+                    day = "\(currentYear)-0\(currentMonth)-0\(currentDay) 00:00:00"
+                } else {
+                    day = "\(currentYear)-0\(currentMonth)-\(currentDay) 00:00:00"
+                }
+            } else {
+                if currentDay < 10 {
+                    day = "\(currentYear)-\(currentMonth)-0\(currentDay) 00:00:00"
+                } else {
+                    day = "\(currentYear)-\(currentMonth)-\(currentDay) 00:00:00"
+                }
+            }
+            
+            print("Day : ", day)
+            
+            let selectDateLength = Tools.customDate.convertStringToDate(time: day).numberOfDaysInMonth()
+            self.insertDayArr(length: selectDateLength)
+            self.reloadDay()
+        case monthPickerView:
+            self.currentMonth = self.monthArr[row]
+            
+            var day = ""
+            
+            if currentMonth < 10 {
+                if currentDay < 10 {
+                    day = "\(currentYear)-0\(currentMonth)-0\(currentDay) 00:00:00"
+                } else {
+                    day = "\(currentYear)-0\(currentMonth)-\(currentDay) 00:00:00"
+                }
+            } else {
+                if currentDay < 10 {
+                    day = "\(currentYear)-\(currentMonth)-0\(currentDay) 00:00:00"
+                } else {
+                    day = "\(currentYear)-\(currentMonth)-\(currentDay) 00:00:00"
+                }
+            }
+
+            print("Day : ", day)
+            
+            let selectDateLength = Tools.customDate.convertStringToDate(time: day).numberOfDaysInMonth()
+            self.insertDayArr(length: selectDateLength)
+            self.reloadDay()
+        case dayPickerView:
+            self.currentDay = self.dayArr[row]
+        default:
+            return
+        }
+    }
+
+}
 
 // MARK: Do NOT COPY
 
@@ -148,5 +288,12 @@ extension Date {
         let dateComponent = (calendar as NSCalendar).components(.year, from: self)
         return dateComponent.year!
     }
+    
+    func day() -> Int {
+        let calendar = Calendar.current
+        let dateComponent = (calendar as NSCalendar).components(.day, from: self)
+        return dateComponent.day!
+    }
+    
     
 }
