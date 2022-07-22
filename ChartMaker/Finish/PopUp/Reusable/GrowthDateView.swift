@@ -9,6 +9,16 @@ import UIKit
 
 class GrowthDateView: UIView {
     
+    //
+    
+    enum GrowthDateCategory {
+        case year
+        case month
+        case day
+    }
+    
+    //
+    
     @IBOutlet weak var dateLabel: UILabel!
     
     // MARK: - Init
@@ -33,8 +43,15 @@ class GrowthDateView: UIView {
     
     //
     
-    func fillUI(value: Int) {
-        self.dateLabel.text = "\(value)"
+    func fillUI(value: Int, category: GrowthDateCategory) {
+        switch category {
+        case .year:
+            self.dateLabel.text = "\(value)" + "년"
+        case .month:
+            self.dateLabel.text = "\(value)" + "월"
+        case .day:
+            self.dateLabel.text = "\(value)" + "일"
+        }
     }
     
 }
