@@ -21,6 +21,8 @@
 		9AE647E5287BB1B300AE162E /* DevelopmentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE647E4287BB1B300AE162E /* DevelopmentProgressView.swift */; };
 		9AE647E7287BDD6400AE162E /* GrowChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE647E6287BDD6400AE162E /* GrowChartView.swift */; };
 		9AE647E9287BEAE600AE162E /* GrowChartIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE647E8287BEAE600AE162E /* GrowChartIndexView.swift */; };
+		E6046798288D02D000E397AF /* DevelopmentProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6046797288D02D000E397AF /* DevelopmentProgressBarView.swift */; };
+		E604679A288D136400E397AF /* BabyGrowthRecordHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6046799288D136400E397AF /* BabyGrowthRecordHistory.swift */; };
 		E63DC3AF287D377C00190D67 /* PopUpDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63DC3AD287D377C00190D67 /* PopUpDatePickerViewController.swift */; };
 		E63DC3B0287D377C00190D67 /* PopUpDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63DC3AE287D377C00190D67 /* PopUpDatePickerViewController.xib */; };
 		E63DC3B4287D5DAC00190D67 /* GrowthDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63DC3B3287D5DAC00190D67 /* GrowthDateView.swift */; };
@@ -71,6 +73,8 @@
 		9AE647E4287BB1B300AE162E /* DevelopmentProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentProgressView.swift; sourceTree = "<group>"; };
 		9AE647E6287BDD6400AE162E /* GrowChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowChartView.swift; sourceTree = "<group>"; };
 		9AE647E8287BEAE600AE162E /* GrowChartIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowChartIndexView.swift; sourceTree = "<group>"; };
+		E6046797288D02D000E397AF /* DevelopmentProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentProgressBarView.swift; sourceTree = "<group>"; };
+		E6046799288D136400E397AF /* BabyGrowthRecordHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyGrowthRecordHistory.swift; sourceTree = "<group>"; };
 		E63DC3AD287D377C00190D67 /* PopUpDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpDatePickerViewController.swift; sourceTree = "<group>"; };
 		E63DC3AE287D377C00190D67 /* PopUpDatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpDatePickerViewController.xib; sourceTree = "<group>"; };
 		E63DC3B3287D5DAC00190D67 /* GrowthDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthDateView.swift; sourceTree = "<group>"; };
@@ -190,12 +194,14 @@
 				9AA469F4287542CE00543C5A /* BigChartView.swift */,
 				9AA469F62875830F00543C5A /* BigChartIndexView.swift */,
 				9AE647E4287BB1B300AE162E /* DevelopmentProgressView.swift */,
+				E6046797288D02D000E397AF /* DevelopmentProgressBarView.swift */,
 				9AE647E6287BDD6400AE162E /* GrowChartView.swift */,
 				9AE647E8287BEAE600AE162E /* GrowChartIndexView.swift */,
 				9A7187A128866B19001FDA92 /* GrowthViewController.swift */,
 				9A7187A228866B19001FDA92 /* GrowthViewController.xib */,
 				9A7187A52887CC24001FDA92 /* ObesityChartView.swift */,
 				9A7187A72887CC35001FDA92 /* ObesityChartIndexView.swift */,
+				E6046799288D136400E397AF /* BabyGrowthRecordHistory.swift */,
 			);
 			path = ChartMaker;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6A9EE562862022700A7B138 /* WeeklyChartView.swift in Sources */,
+				E6046798288D02D000E397AF /* DevelopmentProgressBarView.swift in Sources */,
 				E63DC3AF287D377C00190D67 /* PopUpDatePickerViewController.swift in Sources */,
 				9A7187A82887CC35001FDA92 /* ObesityChartIndexView.swift in Sources */,
 				9A1CF5E028614BD600E0C0C1 /* Font.swift in Sources */,
@@ -362,6 +369,7 @@
 				E6E552132860B4AD001D982B /* ViewController.swift in Sources */,
 				E6E5520F2860B4AD001D982B /* AppDelegate.swift in Sources */,
 				9AA469F5287542CE00543C5A /* BigChartView.swift in Sources */,
+				E604679A288D136400E397AF /* BabyGrowthRecordHistory.swift in Sources */,
 				9AE647E7287BDD6400AE162E /* GrowChartView.swift in Sources */,
 				9AE647E9287BEAE600AE162E /* GrowChartIndexView.swift in Sources */,
 				9AA469B72872796500543C5A /* NinePolygonChartView.swift in Sources */,

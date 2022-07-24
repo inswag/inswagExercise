@@ -102,9 +102,22 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xq1-aJ-G8t" customClass="DevelopmentProgressView" customModule="ChartMaker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="414" height="38"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bur-lY-nWk" customClass="DevelopmentProgressBarView" customModule="ChartMaker" customModuleProvider="target">
+                                        <rect key="frame" x="76" y="0.0" width="254" height="38"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="elg-cM-TQ0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bur-lY-nWk" secondAttribute="bottom" id="2cQ-zi-oVI"/>
+                                    <constraint firstItem="bur-lY-nWk" firstAttribute="leading" secondItem="xq1-aJ-G8t" secondAttribute="leading" constant="76" id="5FW-bI-ODK"/>
                                     <constraint firstAttribute="height" constant="38" id="V0P-oH-4G5"/>
+                                    <constraint firstItem="bur-lY-nWk" firstAttribute="top" secondItem="xq1-aJ-G8t" secondAttribute="top" id="hsT-Vz-tjO"/>
+                                    <constraint firstAttribute="trailing" secondItem="bur-lY-nWk" secondAttribute="trailing" constant="84" id="rAt-Fr-zbX"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -116,7 +129,6 @@
                             <constraint firstItem="OLl-AO-qVH" firstAttribute="top" secondItem="zZp-jm-nLe" secondAttribute="bottom" constant="90.5" id="ET4-CP-BFb"/>
                             <constraint firstItem="PXr-lt-d0L" firstAttribute="centerY" secondItem="zZp-jm-nLe" secondAttribute="centerY" id="OU7-gM-3Va"/>
                             <constraint firstItem="zZp-jm-nLe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OwT-i3-bl4"/>
-                            <constraint firstItem="OLl-AO-qVH" firstAttribute="top" secondItem="xq1-aJ-G8t" secondAttribute="bottom" constant="42.5" id="QpG-q1-6ma"/>
                             <constraint firstItem="xq1-aJ-G8t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rye-gd-Q2a"/>
                             <constraint firstItem="OLl-AO-qVH" firstAttribute="bottom" secondItem="L4Y-9y-k2h" secondAttribute="bottom" id="Z0Q-Z3-NQf"/>
                             <constraint firstItem="hDe-Ne-6bS" firstAttribute="leading" secondItem="zZp-jm-nLe" secondAttribute="trailing" constant="13.5" id="e6z-e2-feQ"/>
