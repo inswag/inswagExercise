@@ -74,10 +74,11 @@ class PopUpDatePickerViewController: UIViewController {
     private func fillUI() {
         if let selectedDate = selectedDate {
             // 기 선택한 날짜가 있을 때
+            self.currentYear = selectedDate.year()
+            self.currentMonth = selectedDate.month()
+            self.currentDay = selectedDate.day()
             
-            
-            
-            
+            self.numberOfDayInMonth = selectedDate.numberOfDaysInMonth()
         } else {
             // 기 선택한 날짜가 없을 때
             let selectedDate = Date()
@@ -146,7 +147,20 @@ class PopUpDatePickerViewController: UIViewController {
     }
 
     @IBAction func finishSelectAction(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        
+        let yearSelectedRow = self.yearPickerView.selectedRow(inComponent: 0)
+        let monthSelectedRow = self.monthPickerView.selectedRow(inComponent: 0)
+        let daySelectedRow = self.dayPickerView.selectedRow(inComponent: 0)
+        
+        let currentYear = self.yearArr[yearSelectedRow]
+        let currentMonth = self.monthArr[monthSelectedRow]
+        let currentDay = self.dayArr[daySelectedRow]
+        
+        
+        print("Current Value is \(currentYear)년 \(currentMonth)월 \(currentDay)일")
+        
+        
+        
     }
     
 }
@@ -185,18 +199,17 @@ extension PopUpDatePickerViewController: UIPickerViewDataSource, UIPickerViewDel
                     viewForRow row: Int,
                     forComponent component: Int,
                     reusing view: UIView?) -> UIView {
-        
         let view = GrowthDateView.init()
         
         switch pickerView {
         case yearPickerView:
-            view.fillUI(value: self.yearArr[row])
+            view.fillUI(value: self.yearArr[row], category: .year)
             return view
         case monthPickerView:
-            view.fillUI(value: self.monthArr[row])
+            view.fillUI(value: self.monthArr[row], category: .month)
             return view
         case dayPickerView:
-            view.fillUI(value: self.dayArr[row])
+            view.fillUI(value: self.dayArr[row], category: .day)
             return view
         default:
             let view = UIView.init()
@@ -209,23 +222,18 @@ extension PopUpDatePickerViewController: UIPickerViewDataSource, UIPickerViewDel
                     inComponent component: Int) {
         switch pickerView {
         case yearPickerView:
+            // Data Set
             self.currentYear = self.yearArr[row]
             
+            // Picker Set
             var day = ""
             
             if currentMonth < 10 {
-                if currentDay < 10 {
-                    day = "\(currentYear)-0\(currentMonth)-0\(currentDay) 00:00:00"
-                } else {
-                    day = "\(currentYear)-0\(currentMonth)-\(currentDay) 00:00:00"
-                }
+                day = "\(currentYear)-0\(currentMonth)-01 00:00:00"
             } else {
-                if currentDay < 10 {
-                    day = "\(currentYear)-\(currentMonth)-0\(currentDay) 00:00:00"
-                } else {
-                    day = "\(currentYear)-\(currentMonth)-\(currentDay) 00:00:00"
-                }
+                day = "\(currentYear)-\(currentMonth)-01 00:00:00"
             }
+
             
             print("Day : ", day)
             
@@ -233,22 +241,16 @@ extension PopUpDatePickerViewController: UIPickerViewDataSource, UIPickerViewDel
             self.insertDayArr(length: selectDateLength)
             self.reloadDay()
         case monthPickerView:
+            // Data Set
             self.currentMonth = self.monthArr[row]
             
+            // Picker Set
             var day = ""
             
             if currentMonth < 10 {
-                if currentDay < 10 {
-                    day = "\(currentYear)-0\(currentMonth)-0\(currentDay) 00:00:00"
-                } else {
-                    day = "\(currentYear)-0\(currentMonth)-\(currentDay) 00:00:00"
-                }
+                day = "\(currentYear)-0\(currentMonth)-01 00:00:00"
             } else {
-                if currentDay < 10 {
-                    day = "\(currentYear)-\(currentMonth)-0\(currentDay) 00:00:00"
-                } else {
-                    day = "\(currentYear)-\(currentMonth)-\(currentDay) 00:00:00"
-                }
+                day = "\(currentYear)-\(currentMonth)-01 00:00:00"
             }
 
             print("Day : ", day)
@@ -257,7 +259,9 @@ extension PopUpDatePickerViewController: UIPickerViewDataSource, UIPickerViewDel
             self.insertDayArr(length: selectDateLength)
             self.reloadDay()
         case dayPickerView:
+            // Data Set
             self.currentDay = self.dayArr[row]
+            
         default:
             return
         }
