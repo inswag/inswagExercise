@@ -43,6 +43,9 @@ class ViewController: UIViewController {
     var stepList: [StepModel] = []
     
     var index: Int = 0
+    var count: Int = 0
+    
+    // MARK: VIEW LIFE CYCLE
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,10 +55,37 @@ class ViewController: UIViewController {
         
 //        print("Auth : ", healthStore.authorizationStatus(for: typeToRead!).rawValue)
         
-        devProgressView.category = .head
+//        devProgressView.category = .head
+        
+        self.calculateWitdth()
     }
-
-    var count: Int = 0
+    
+    @IBOutlet weak var firstWidthConst: NSLayoutConstraint!
+    @IBOutlet weak var secondWidthConst: NSLayoutConstraint!
+    @IBOutlet weak var thirdWidthConst: NSLayoutConstraint!
+    
+    let firstValue: CGFloat = 30
+    let secondValue: CGFloat = 70
+    let thirdValue: CGFloat = 80
+    
+    private func calculateWitdth() {
+        let fullWidth = UIScreen.main.bounds.width - (24 * 2)
+        
+        let firstWidth = (fullWidth * firstValue) / 100
+        let secondWidth = (fullWidth * secondValue) / 100
+        let thirdWidth = (fullWidth * thirdValue) / 100
+        
+        let resultFirst = firstWidth
+        let resultSecond = secondWidth - firstWidth
+        let resultThird = thirdWidth - secondWidth
+        
+        self.firstWidthConst.constant = resultFirst
+        self.secondWidthConst.constant = resultSecond
+        self.thirdWidthConst.constant = resultThird
+    }
+    
+    
+    
     
     @IBAction func getLeftAction(_ sender: UIButton) {
         
